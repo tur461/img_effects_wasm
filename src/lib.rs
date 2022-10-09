@@ -27,5 +27,11 @@ pub fn process_img(b64_content: &str) {
         clog1(&"bytes to image done.".into());
     } else {
         clog1(&"failed to convert bytes to images!".into());
+        return;
     }
+
+    let mut img = res.unwrap();
+    img = img.grayscale();
+
+    clog1(&"image converted to grayscale.".into());
 }
