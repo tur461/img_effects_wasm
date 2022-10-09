@@ -20,6 +20,8 @@
       ''
     );
     console.log('image reading completed', b64Content.slice(0, 20));
+    // lets call the wasm function
+    rustEnd.process_img(b64Content);
   }
 
   ip.addEventListener('change', e => {

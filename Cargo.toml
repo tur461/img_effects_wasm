@@ -15,6 +15,15 @@ crate-type = ["cdylib"]
 # actually generates js-rust bindings
 wasm-bindgen = "0.2.83"
 
+[dependencies.web-sys]
+# this crate exports js functions to rust
+version = "0.3.60"
+# this crate exports so many things
+# we need only js console
+features = [
+  "console"
+]
+
 
 [profile.dev]
 panic = "abort" # disable stack unwinding on panic

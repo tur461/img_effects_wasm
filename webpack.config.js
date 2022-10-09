@@ -12,6 +12,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
+    // this plugin compiles rust project and
+    // creates pkg folder with wasm bindings with js
     new WasmWebpackPlugin({
       crateDirectory: path.resolve(__dirname, '.'),
     })
