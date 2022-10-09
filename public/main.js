@@ -1,4 +1,14 @@
-(function() {
+(async function() {
+  let rustEnd = null;
+  try {
+    // import wasm
+    rustEnd = await import('../pkg/index.js');
+  } catch(e) {
+    return console.log('error importing wasm:', e);
+  }
+
+  console.log('wasm import success:', rustEnd)
+
   const ip = document.getElementById('upload');
   const fReader = new FileReader();
 
