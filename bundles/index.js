@@ -1,0 +1,1 @@
+!function(){const e=document.getElementById("upload"),a=new FileReader;a.onloadend=e=>{const n=a.result.replace(/^data:image\/(png|jpeg|jpg);base64,/,"");console.log("image reading completed",n.slice(0,20))},e.addEventListener("change",(n=>{a.readAsDataURL(e.files[0])}))}();
