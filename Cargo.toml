@@ -11,7 +11,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 base64 = "0.13.0"
-image = "0.24.4"
+image = "0.23.14"
 # this crate lets us to talk with
 # rust from js
 # actually generates js-rust bindings
