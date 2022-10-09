@@ -1,8 +1,8 @@
+use wasm_bindgen::prelude::*;
 use base64::{encode as b64enc, decode as b64dec};
 // log_1 functions logs only 1 value
-use web_sys::console::{log_1 as clog1, log_2 as clog2};
-use wasm_bindgen::prelude::*;
 use image::{ load_from_memory, ImageOutputFormat };
+use web_sys::console::{log_1 as clog1, log_2 as clog2};
 
 #[wasm_bindgen]
 pub fn process_img(b64_content: &str) -> String {
